@@ -70,12 +70,25 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f50-W1-g3w">
+                                <rect key="frame" x="165" y="241" width="270" height="117"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="270" id="8gS-lb-F7e"/>
+                                    <constraint firstAttribute="height" constant="117" id="hIf-Og-clZ"/>
+                                </constraints>
+                                <state key="normal" image="reset-Button"/>
+                                <connections>
+                                    <action selector="resetButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gnJ-04-DeZ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="sNr-qo-fBB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Jl-7s-AeA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SmE-mt-gCv" secondAttribute="trailing" constant="-20" id="Bor-dE-twO"/>
+                            <constraint firstItem="f50-W1-g3w" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FtJ-K3-qUX"/>
                             <constraint firstItem="rmi-pa-Q57" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="H3K-Ri-9gg"/>
+                            <constraint firstItem="rmi-pa-Q57" firstAttribute="top" secondItem="f50-W1-g3w" secondAttribute="bottom" constant="30" id="KDt-7p-vAR"/>
                             <constraint firstItem="SmE-mt-gCv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="MBs-sR-nQb"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="SmE-mt-gCv" secondAttribute="bottom" id="Mjz-LP-0lw"/>
                             <constraint firstItem="SmE-mt-gCv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="O2I-XA-N53"/>
@@ -84,6 +97,7 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="rmi-pa-Q57" secondAttribute="bottom" constant="8" id="Z0z-vB-DED"/>
                             <constraint firstItem="Hzd-jN-vd6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="73" id="cj4-1J-9yx"/>
                             <constraint firstItem="rmi-pa-Q57" firstAttribute="top" secondItem="aru-27-Tow" secondAttribute="bottom" constant="48" id="fOb-be-F8r"/>
+                            <constraint firstItem="f50-W1-g3w" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jgl-Kp-R4r"/>
                             <constraint firstItem="SmE-mt-gCv" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="k67-Wl-K5i"/>
                             <constraint firstItem="Dez-i1-NQW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rWA-kh-TlH"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Dez-i1-NQW" secondAttribute="bottom" constant="56" id="tCx-Xh-09S"/>
@@ -109,6 +123,7 @@
                         <outlet property="mathLnl" destination="Hzd-jN-vd6" id="SLM-Uz-rOi"/>
                         <outlet property="multipleInsert" destination="aru-27-Tow" id="eh3-4s-Hm0"/>
                         <outlet property="playButton" destination="rmi-pa-Q57" id="U5J-NL-lf1"/>
+                        <outlet property="resetButton" destination="f50-W1-g3w" id="r1e-b9-bbW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -121,5 +136,6 @@
         <image name="add-button" width="210" height="108"/>
         <image name="board" width="690" height="521"/>
         <image name="notepad" width="216" height="204"/>
+        <image name="reset-Button" width="216" height="117"/>
     </resources>
 </document>

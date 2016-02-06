@@ -34,10 +34,17 @@ class ViewController: UIViewController {
         @IBOutlet weak var mathLnl: UILabel!
         @IBOutlet weak var addButton: UIButton!
     
+        @IBOutlet weak var resetButton: UIButton!
     
     
+    @IBAction func resetButton(sender: AnyObject) {
+        shouldBehidden(false)
+        
+        counter = -1
+        
+    }
     
-    
+ 
     
         @IBAction func playButton(sender: AnyObject) {
             if multipleInsert.text != nil && multipleInsert.text != ""{
@@ -65,7 +72,10 @@ class ViewController: UIViewController {
     
     
     // Functions 
-    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        view.endEditing(true)
+        return false
+    }
     
     func shouldBehidden(check:Bool){
         if check == true{
@@ -76,6 +86,7 @@ class ViewController: UIViewController {
             
             mathLnl.hidden = false
             addButton.hidden = false
+            resetButton.hidden = false
             
         }else{
             
@@ -85,7 +96,7 @@ class ViewController: UIViewController {
             
             mathLnl.hidden = true
             addButton.hidden = true
-            
+            resetButton.hidden = true
         }
     }
 
